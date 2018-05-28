@@ -1,6 +1,3 @@
-
-console.log("function Stack is FILO");
-  
 function Stack () {
     this.arr = [];
   
@@ -14,7 +11,7 @@ function Stack () {
   
     this.pop = function() {
       if (this.isEmpty()) 
-        return 'The Array is empty.';
+        return 'The Array Is Empty.';
       else 
         return this.arr.pop();  
     };
@@ -22,24 +19,6 @@ function Stack () {
 
 let myStack = new Stack(); 
 
-  myStack.push(1);
-  myStack.push(2);
-  myStack.push(3);
-
-  console.log(myStack.pop());
-  console.log(myStack.pop()); 
-  console.log(myStack.pop());
-  console.log(myStack.pop()); 
-
-let myStack222222 = new Stack();
-myStack222222.push(1);
-myStack.push(4);
-
-console.log(myStack222222.pop()); 
-console.log(myStack.pop()); 
-
-
-console.log("function Q is FIFO");
 
 function Q () {
   
@@ -48,7 +27,7 @@ function Q () {
   this.arr = [];
   this.pop = function() {
       if (this.isEmpty()) 
-        return 'The Array is empty.';
+        return 'The Array Is Empty.';
       else 
         return this.arr.shift();
   }
@@ -56,18 +35,39 @@ function Q () {
 
 let myQ = new Q();
 
-myQ.push(1);
-myQ.push(2);
-myQ.push(3);
+function addtoStack() {
+  let valueToStack = document.getElementById("inputS").value;
+  let newItem = document.createElement('div');
+  let stack = document.getElementById('stack');
 
-console.log(myQ.pop()); 
-console.log(myQ.pop());
-console.log(myQ.pop());
-console.log(myQ.pop());
+  myStack.push(valueToStack);
+  newItem.innerHTML = myStack.arr[myStack.arr.length-1];
+  newItem.className = "itemS";
+  stack.appendChild(newItem);
+}
 
-let myQ222222 = new Q();
-myQ222222.push(11);
-myQ.push(44);
+function addtoQueue() {
+  let valueToQueue = document.getElementById("inputQ").value;
+  let newItem = document.createElement('div');
+  let queue = document.getElementById('queue');
 
-console.log(myQ222222.pop()); 
-console.log(myQ.pop()); 
+  myQ.push(valueToQueue);
+  newItem.innerHTML = myQ.arr[myQ.arr.length-1];
+  newItem.className = "itemQ";
+  queue.appendChild(newItem);
+}
+
+function deleteFromS() {
+  let stack = document.getElementById('stack')
+  let items = document.getElementsByClassName('itemS');
+  stack.removeChild(items[myStack.arr.length-1]);
+  myStack.pop();
+}
+
+function deleteFromQ() {
+  let queue = document.getElementById('queue');
+  let items = document.getElementsByClassName('itemQ');
+  queue.removeChild(items[0]);
+
+  myQ.pop();
+}

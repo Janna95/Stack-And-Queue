@@ -24,7 +24,7 @@ body {
     
 }
 
-.stack {
+#stack {
     width: 8vw;
     height: 50vh;
     background-color: rgb(51, 163, 163);
@@ -33,7 +33,7 @@ body {
     align-items: center;
 }
 
-.queue {
+#queue {
     width: 30vw;
     height: 15vh;
     background-color: rgb(61, 114, 158);

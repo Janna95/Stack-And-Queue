@@ -12,26 +12,26 @@
 
         <div class="container-stack">
             <h2>STACK</h2>
-            <div class="stack">                   
+            <div id="stack">                   
                 <div class="itemS">27</div>
                 <div class="itemS">28</div>
                 <div class="itemS">29</div>  
             </div> 
             <br>
-            <input id="addToStack"><button >ADD</button>
-            <button id="deleteStack">DELETE</button>
+            <input id="inputS"><button onclick="addtoStack()">ADD</button>
+            <button id="deleteStack" onclick="deleteFromS()">DELETE</button>
         </div>
 
         <div class="container-queue">
             <h2>QUEUE</h2>
-            <div class="queue">
+            <div id="queue">
                 <div class="itemQ">27</div>
                 <div class="itemQ">28</div>
                 <div class="itemQ">29</div> 
             </div>
             <br> 
-            <input id="addToQ"><button >ADD</button>
-            <button id="deleteQ">DELETE</button>
+            <input id="inputQ"><button onclick="addtoQueue()">ADD</button>
+            <button id="deleteQ" onclick="deleteFromQ()">DELETE</button>
         </div>
     </div>  
     <script src="main.js"></script>
